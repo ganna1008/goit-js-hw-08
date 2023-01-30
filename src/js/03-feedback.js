@@ -5,7 +5,7 @@ const formEl = document.querySelector('.feedback-form')
 
 const KEY_FORM = "feedback-form-state";
 
-formEl.addEventListener('input', handleFormInput);
+formEl.addEventListener('input', throttle(handleFormInput, 500));
 formEl.addEventListener('submit', handleFormSubmit);
 
 let formOutput = {};
